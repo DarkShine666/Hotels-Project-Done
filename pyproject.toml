@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "hotel_booking_service"
+version = "0.1.0"
+description = "Simple hotel room and booking management service"
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT"
+
+# Указываем путь к исходным файлам
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.95.0"
+uvicorn = "^0.23.0"
+sqlalchemy = "^2.0.0"
+psycopg2-binary = "^2.9.0"
+pydantic = "^1.10.0"
+alembic = "^1.12.0"
+python-dotenv = "^1.0.1" 
+asyncpg = "^0.30.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.0"
+ruff = "^0.0.292"
+pre-commit = "^3.5.0"
+black = "^23.10.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-asyncio = "^0.26.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
